@@ -41,7 +41,7 @@
                 echo "<h2>No se envió información</h2>";
             }
 
-            echo '<a href="ej5.html"><h2>Volver al inicio</h2></a>';
+            echo '<a href="ej5.php"><h2>Volver al inicio</h2></a>';
             ?>
 
             

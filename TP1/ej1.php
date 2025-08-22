@@ -5,6 +5,7 @@
     <title>Verificar número</title>
 </head>
 <body>
+    
     <h2>Ingrese un número</h2>
     <form action="vernumero.php" method="post">
         <label for="numero">Número:</label>

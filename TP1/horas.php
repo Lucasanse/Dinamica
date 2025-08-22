@@ -33,7 +33,7 @@ echo "</ul>";
 echo "<h3>Total de horas: $totalHoras horas</h3>";
 
 // Link para volver al formulario
-echo '<a href="ej2.html">Volver</a>';
+echo '<a href="ej2.php">Volver</a>';
 
 }else {
     echo "<h2>No se recibieron datos.</h2>";

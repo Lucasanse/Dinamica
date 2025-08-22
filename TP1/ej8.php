@@ -1,31 +1,20 @@
-<?php
-if ($_POST) {
-    $edad = (int) $_POST["edad"];
-    //variable booleana que chequea si en el form se selecciono o no el check de estudiante
-    $esEstudiante = isset($_POST["estudiante"]);
-    $precio = 0;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio 8</title>
+</head>
+<body>
+    <h2>Consultar el valor de entradas</h2>
+    <form action="ej8Control.php" method="POST">
+        <label>Edad:</label>
+        <input type="number" name="edad" min="0" required><br><br>
 
-    if ($esEstudiante && $edad < 12) {
-        $precio = 160;
-    } elseif ($esEstudiante && $edad >= 12) {
-        $precio = 180;
-    } elseif (!$esEstudiante && $edad < 12) {
-        $precio = 160;
-    } else {
-        $precio = 300;
-    }
+        <label>¿Es estudiante?</label>
+        <input type="checkbox" name="estudiante" value="1"><br><br>
 
-    echo "<h2>Resultado</h2>";
-    echo "<p>Edad: $edad años</p>";
-    echo "<p>Estudiante: ";
-    if ($esEstudiante){
-        echo "SI </p>";
-    } else{
-        echo "NO </p>";
-    }
-    echo "<p>El precio de la entrada es: $$precio</p>";
-    echo "<br><a href='ej8.html'>Volver a consultar</a>";
-} else {
-    echo "<h2>No se recibieron datos</h2>";
-}
-?>
+        <input type="submit" value="Calcular precio">
+        <input type="reset" value="Limpiar formulario">
+    </form>
+</body>
+</html>

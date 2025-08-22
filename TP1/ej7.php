@@ -1,30 +1,26 @@
-<?php
-if ($_POST) {
-    $num1 = (int) $_POST["num1"];
-    $num2 = (int) $_POST["num2"];
-    $operacion = $_POST["operacion"];
-    $resultado = "";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <h2>Calculadora simple</h2>
+    <form action="ej7Control.php" method="POST">
+        <label>Primer número:</label>
+        <input type="text" name="num1" required><br><br>
 
-    switch ($operacion) {
-        case "suma":
-            $resultado = $num1 + $num2;
-            $simbolo = "+";
-            break;
-        case "resta":
-            $resultado = $num1 - $num2;
-            $simbolo = "-";
-            break;
-        case "multiplicacion":
-            $resultado = $num1 * $num2;
-            $simbolo = "×";
-            break;
-        default:
-            $resultado = "No se permite esta operacion";
-            $simbolo = "?";
-    }
+        <label>Segundo número:</label>
+        <input type="text" name="num2" required><br><br>
 
-    echo "<h2>Resultado de la operación</h2>";
-    echo "<p>Operación: $operacion</p>";
-    echo "<p>Operación completa: $num1 $simbolo $num2 = $resultado</p>";
-}
-?>
+        <label>Operación:</label>
+        <select name="operacion" required>
+            <option value="suma">SUMA</option>
+            <option value="resta">RESTA</option>
+            <option value="multiplicacion">MULTIPLICACION</option>
+        </select><br><br>
+
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>

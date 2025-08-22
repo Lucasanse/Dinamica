@@ -24,7 +24,7 @@
                 } else {
                     echo "<h2>No se envió información";
                 }
-                echo '<a href="ej4.html"><h2>Volver al inicio</h2></a>'
+                echo '<a href="ej4.php"><h2>Volver al inicio</h2></a>'
             ?>
             
     </div>

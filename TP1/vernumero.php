@@ -18,5 +18,5 @@ if ($_POST) {
 }
 
 // Link para volver al formulario
-echo '<a href="ej1.html">Volver</a>';
+echo '<a href="ej1.php">Volver</a>';
 ?>
